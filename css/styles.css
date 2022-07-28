@@ -61,12 +61,12 @@ h6 {
   padding-right: 15px;
 }
 
-.container-header {
+/* .container-header {
   margin: 0 auto;
   width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
-}
+} */
 
 .center {
   text-align: center;
@@ -78,27 +78,27 @@ h6 {
   border-bottom: 1px solid #ececec;
 }
 
-.header-content {
+.header__marking {
   display: flex;
   justify-content: space-between;
 }
 
-.header-nav {
+.site-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.nav-site {
+.site-nav__scroll {
   display: flex;
 }
 
-.logo-box {
+.logotype-position {
   display: inline-block;
   margin-right: 93px;
 }
 
-.logo {
+.logotype__logo {
   font-family: 'Raleway';
   font-weight: 700;
   font-size: 26px;
@@ -107,7 +107,7 @@ h6 {
   color: #2196f3;
 }
 
-.logo-header {
+.logotype__logo_header {
   font-family: 'Raleway';
   font-weight: 700;
   font-size: 26px;
@@ -116,7 +116,7 @@ h6 {
   color: #000000;
 }
 
-.logo-footer {
+.logotype__logo_footer {
   font-family: 'Raleway';
   font-weight: 700;
   font-size: 26px;
@@ -125,18 +125,15 @@ h6 {
   color: #ffffff;
 }
 
-.site-list {
-  color: var(--heading-main-color);
-}
-
-.site-list:not(:last-child) {
+.site-nav__list:not(:last-child) {
   margin-right: 50px;
 }
 
-.site-link {
+.site-nav__link {
   display: block;
   padding-top: 32px;
   padding-bottom: 30px;
+
   position: relative;
 
   font-weight: 500;
@@ -148,16 +145,16 @@ h6 {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.site-link:hover,
-.site-link:focus {
+.site-nav__link:hover,
+.site-nav__link:focus {
   color: var(--accent);
 }
 
-.current {
+.site-nav__current {
   color: var(--accent);
 }
 
-.current::after {
+.site-nav__current::after {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -169,22 +166,22 @@ h6 {
   border-radius: 2px;
 }
 
-.header-contact {
+.contact {
   display: flex;
   align-items: center;
 }
 
-.contact-link:hover,
-.contact-link:focus {
+.contact__link:hover,
+.contact__link:focus {
   color: var(--accent);
   fill: var(--accent);
 }
 
-.contact-list:not(:last-child) {
+.contact__list:not(:last-child) {
   margin-right: 50px;
 }
 
-.contact-link {
+.contact__link {
   display: inline-flex;
   align-items: center;
 
@@ -197,9 +194,12 @@ h6 {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.contact-icon {
-  margin-right: 10px;
+.contact__icon {
   fill: currentColor;
+}
+
+.contact__icon.margin {
+  margin-right: 10px;
 }
 
 /* main  */
@@ -208,21 +208,26 @@ h6 {
 .hero {
   max-width: 1600px;
   height: 600px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 200px;
-  padding-bottom: 200px;
+
+  text-align: center;
 
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url(../images/hero.jpg);
 }
 
-.hero-title {
+.hero-position {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+
+.hero__title {
   max-width: 700px;
-  text-align: center;
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 30px;
+  text-align: center;
 
   font-weight: 900;
   font-size: 44px;
@@ -232,7 +237,7 @@ h6 {
   text-transform: uppercase;
 }
 
-.hero-button {
+.hero__button {
   width: 200px;
   height: 50px;
   border-radius: 4px;
@@ -247,7 +252,7 @@ h6 {
 
 /* advantage */
 
-.advantage {
+.advantage-position {
   padding-top: 94px;
   padding-bottom: 94px;
 }
@@ -265,20 +270,20 @@ h6 {
   overflow: hidden;
 }
 
-.advantage-scroll {
+.advantage__scroll {
   display: flex;
 }
 
-.advantage-list {
+.advantage__list {
   width: calc((100% - 90px) / 4);
   margin-right: 30px;
 }
 
-.advantage-list:nth-child(4n) {
+.advantage__list:nth-child(4n) {
   margin-right: 0;
 }
 
-.advantage-box {
+.advantage__box {
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -290,12 +295,12 @@ h6 {
   margin-bottom: 30px;
 }
 
-.advantage-icon {
+.advantage__icon {
   width: 70px;
   height: 70px;
 }
 
-.advantage-title {
+.advantage__title {
   margin-bottom: 10px;
 
   font-weight: 700;
@@ -306,7 +311,7 @@ h6 {
   color: var(--heading-main-color);
 }
 
-.advantage-text {
+.advantage__text {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
@@ -744,9 +749,6 @@ h6 {
 
 .modal-close:hover .close-black {
   fill: var(--accent);
-}
-
-.modal-form {
 }
 
 .modal-title {
